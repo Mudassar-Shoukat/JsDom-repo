@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>all dom selector</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(52, 48, 48);
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <h1 id="one">first h1</h1>
+      <h1 class="two">second h1</h1>
+      <h1>third h1</h1>
+    </div>
+    <button id="firstbutton" type="button" onclick="myFunction()">
+      click me
+    </button>
+    <script>
+      function myFunction() {
+        document.getElementById("firstbutton").style.backgroundColor = "green";
+        document.getElementById("firstbutton").style.color = "white";
+      }
+    </script>
+  </body>
+</html>

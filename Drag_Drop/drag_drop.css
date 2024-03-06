@@ -1,0 +1,71 @@
+body {
+  background-color: #621600;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.boxes_div {
+  display: flex;
+  height: auto;
+  width: auto;
+}
+.dropzone {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px;
+  width: 50%;
+  height: auto;
+  background-color: #561600;
+  border: 1px solid rgb(53, 53, 50);
+  box-shadow: inset 0px 0px 18px -10px #957368;
+  margin: 22px;
+  border-radius: 10px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 8px;
+  background-color: #340f03;
+  cursor: pointer;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 7px 7px 7px 0px #2e1004;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.box:hover {
+  background: linear-gradient(rgb(55, 28, 45), rgba(7, 20, 21, 0.993));
+}
+.result_div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 22px;
+  color: white;
+}
+.Drag_Drop_re {
+  background: #142820;
+  color: white;
+  background: repeating-radial-gradient(
+    circle farthest-corner at center center,
+    #561600 0%,
+    #491504 20%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  margin-right: 33px;
+  border: 1px solid rgb(76, 76, 72);
+  height: 100px;
+  width: 150px;
+  border-radius: 7px;
+}

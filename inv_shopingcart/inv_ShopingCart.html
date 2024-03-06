@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="inv_ShopingCart.css">
+</head>
+<body>
+    <h1>Inventory Management</h1>
+    <form id="product-form">
+      <h3>Add Product</h3>
+      <label for="name">ID:</label>
+      <input type="number" id="id" required>
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <br>
+      <label for="price">Price:</label>
+      <input type="number" id="price" required>
+      <br>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" required>
+      <br>
+      <button id="add-product-btn">Add Product Inventory</button>
+  </form>
+    <div id="inventory-container">
+        <table>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+                      <tbody id="inventory-table-body">
+                      </tbody>
+        </table>
+    </div>  
+</body>
+<script src="inv_ShopingCart.js"></script> 
+
+</html>

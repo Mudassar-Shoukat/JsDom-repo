@@ -1,0 +1,81 @@
+body { 
+	background-color: #101028; 	
+	margin: 0; 
+	padding: 0; 
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+} 
+
+header { 
+	/* background-color: #f4f4f7;  */
+	width: 100%; 
+	color: #fff;  
+	padding: 1rem; 
+	text-align: center; 
+} 
+
+main { 
+	margin: 2rem; 
+	text-align: center; 
+} 
+
+input { 
+	padding: 0.5rem; 
+	font-size: 1rem; 
+	border-radius: 7px; 
+    border: 1px solid rgb(61, 54, 11);
+    box-shadow: 0 5px 5px  rgba(142, 136, 128, 0.866);  
+
+} 
+button { 
+	padding: 0.5rem 1rem; 
+    margin-left:none;
+    box-shadow: 0 5px 5px  rgba(142, 136, 128, 0.866);  
+    transition: 0.1s ease-in-out;
+	font-size: 1rem; 
+	cursor: pointer; 
+    border: 1px solid rgb(61, 54, 11);
+    border-radius: 7px; 
+    background-color: rgb(245, 245, 245);
+} 
+button:hover{
+    background-color: antiquewhite;
+    transition: 1s ease-in-out;  
+}
+#MoviesGrid { 
+	margin-top: 2rem; 
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+    background-color: rgb(246, 239, 239); 
+} 
+.movie-card { 
+	 width: calc(25% - 20px);    
+	margin: 10px; 
+	text-align: center; 
+} 
+
+.movie-card img { 
+	max-width: 100%; 
+	height:80%; 
+    border-radius: 5px;
+} 
+
+@media screen and (max-width: 1200px) { 
+	.movie-card { 
+		width: calc(33.33% - 20px); 
+	} 
+} 
+
+@media screen and (max-width: 800px) { 
+	.movie-card { 
+		width: calc(50% - 20px); 
+	} 
+} 
+
+@media screen and (max-width: 600px) { 
+	.movie-card { 
+		width: calc(100% - 20px); 
+	} 
+}

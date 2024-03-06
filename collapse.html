@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <style>
+    body {
+      background-color: #f0f1f3;
+    }
+    .collapsible {
+      background-color: #cfd1d4;
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      margin-left: 12px;
+      width: 50%;
+      border: 1px solid #b8babe;
+      text-align: left;
+
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .collapsible:hover {
+      background-color: #b8babe;
+    }
+
+    .content {
+      width: 48%;
+      margin-left: 12px;
+      display: none;
+      border: 1px solid #d2d4d9;
+      border-radius: 7px;
+      padding: 12px;
+      overflow: hidden;
+      background-color: #e3e6eb;
+    }
+    .animation {
+      line-height: 15px;
+      animation-duration: 5s;
+    }
+  </style>
+
+  <body>
+    <h2>Collapsibles</h2>
+
+    <button type="button" class="collapsible" id="button_one">
+      Open Collapsible 1
+    </button>
+    <div class="content" id="content_one">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+
+    <button type="button" class="collapsible" id="button_two">
+      Open Collapsible 2
+    </button>
+    <div class="content" id="content_two">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    for (let i = 0; i < collapsibles.length; i++) {
+      const collap = collapsibles[i];
+      collap.addEventListener("click", (event) => {
+        const content = collap.nextElementSibling;
+        if (content.style.display === "block") {
+          console.log("display is true block");
+          content.style.display = "none";
+          collap.textContent = "Open collapsible";
+          $(content).removeClass("animation");
+        } else {
+          content.style.display = "block";
+          //   console.log('display is false block');
+          collap.textContent = "Close collapsible";
+          $(content).addClass("animation");
+        }
+      });
+    }
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create a new element in dom</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(31, 27, 27);
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <div class="child">child_one</div>
+      <div class="child">child_two</div>
+      <div class="child">child_three</div>
+      <div class="child">child_four</div>
+      <div class="child">child_five</div>
+    </div>
+  </body>
+  <script>
+    let parn = document.querySelector(".parent");
+    console.log(parn);
+    console.log(parn.children);
+    console.log(parn.children[0].innerHTML);
+    parn.children[0].style.color = "red";
+    // count a total chid child add in parent
+    var count = document.querySelector(".parent").childElementCount;
+    console.log("Total child:", count);
+    //  create a new element
+    let first_div = document.createElement("div");
+    console.log(first_div);
+    first_div.id = "my_first_div";
+    first_div.innerHTML = "create a new element";
+    document.querySelector(".parent").appendChild(first_div);
+    document.getElementById("my_first_div").style.color = "yellow";
+  </script>
+</html>

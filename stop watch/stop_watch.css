@@ -1,0 +1,100 @@
+.container { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	width: 100%; 
+	height: 100vh; 
+    flex-direction: column; 
+	background-color: #08022ef7; 
+    color: white;
+    
+} 
+.inner_main{
+    border: 1px solid rgb(43, 63, 118);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgb(78, 87, 96) 0px 15px 15px -15px inset,  
+    rgb(78, 87, 96) 0px -15px 15px -15px inset,
+     rgb(78, 87, 96) 15px 0px 15px -15px inset,  
+     rgb(78, 87, 96) -15px 0px 15px -15px inset;
+    background-color: #062442;
+}
+
+.digit { 
+	font-size: 60px; 
+	color: #fff; 
+   background-color: #062442;
+   border: 1px solid #04172a;
+   transform: translateY(5px);
+   box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+   border-radius: 5px;
+   padding: 5px;
+} 
+
+.txt { 
+	font-size: 15px; 
+	color: #fffcd6; 
+} 
+
+#buttons { 
+	margin-top: 30px;
+    margin-left: 10px; 
+} 
+
+.btn { 
+	width: 100px; 
+	padding: 10px 15px; 
+	margin: 0px 7px; 
+    margin-left: 10px;
+	border-top-right-radius: 15px; 
+	border-bottom-left-radius: 15px; 
+	border-top-left-radius: 4px; 
+	cursor: pointer; 
+	font-size: 20px; 
+	transition: 0.5s; 
+	color: white; 
+	font-weight: 400; 
+    box-shadow: 0 2px 2px 2px rgba(94, 83, 149, 0.866);  
+
+} 
+#note_time{
+    /* border: 1px solid rgb(215, 217, 227); */
+    background-color: #114a83;
+   box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+ height: 30px;
+   width: 50%;
+    
+}
+
+#start { 
+	background-color: #009779; 
+} 
+#start:hover{
+    background-color: #076653;
+    transform: translateY(5px);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+#stop { 
+	background-color: #0e85fc; 
+} 
+#stop:hover { 
+	background-color: #0861b9; 
+    transform: translateY(5px);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+} 
+#reset { 
+	background-color: #dc230e; 
+}
+#reset:hover { 
+	background-color: #b01b0a; 
+    transform: translateY(5px);
+    box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}

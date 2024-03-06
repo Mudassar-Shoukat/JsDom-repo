@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simple Calculator</title>
+  <style>
+    .calculator {
+      padding: 10px;
+      border-radius: 7px;
+      height: 370px;
+      width: 300px;
+      margin: auto;
+      margin-top: 33px;
+      background-color: rgba(36, 35, 35, 0.932);
+      box-shadow: rgba(15, 13, 13, 0.19) 0px 10px 20px, rgba(20, 20, 20, 0.23) 0px 6px 6px;
+    }
+
+    .result_screen {
+      background-color: #edeef4;
+      color: black;
+      border-radius: 6px;
+      width: 100%;
+      margin: 3px;
+      height: 65%;
+    }
+
+    #btn {
+      background-color: rgb(36, 35, 35);
+    }
+
+    input[type=button] {
+      background-color: #272528;
+      color: white;
+
+      font-size: large;
+      border: solid black 0.5px;
+      width: 100%;
+      border-radius: 5px;
+      height: 70%;
+      box-shadow: inset 4px 4px 6px -1px rgba(234, 225, 225, 0.2);
+    }
+
+    input[type=button]:hover {
+      cursor: pointer;
+      background: linear-gradient(rgba(10, 119, 192, 0.277), rgba(116, 42, 235, 0.214));
+    }
+  </style>
+
+</head>
+
+<body>
+  <table class="calculator">
+    <tr>
+      <td colspan="3"> <input class="result_screen" type="text" id="result" style="font-size: large;" /> </td>
+      <!-- clearScreen() function clears all the values -->
+      <td> <input type="button" value="AC" onclick="clearScreen()" id="btn"
+          style="margin-left: 8px; background-color: #606167;" /> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="7" onclick="click_enter_value('7')" /> </td>
+      <td> <input type="button" value="8" onclick="click_enter_value('8')" /> </td>
+      <td> <input type="button" value="9" onclick="click_enter_value('9')" /> </td>
+      <td> <input type="button" value="/" onclick="click_enter_value('/')" style="border-radius: 100px;"
+          id="operator" /> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="4" onclick="click_enter_value('4')" /> </td>
+      <td> <input type="button" value="5" onclick="click_enter_value('5')" /> </td>
+      <td> <input type="button" value="6" onclick="click_enter_value('6')" /> </td>
+      <td> <input type="button" value="-" onclick="click_enter_value('-')" style="border-radius: 25px;" /> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="1" onclick="click_enter_value('1')" /> </td>
+      <td> <input type="button" value="2" onclick="click_enter_value('2')" /> </td>
+      <td> <input type="button" value="3" onclick="click_enter_value('3')" /> </td>
+      <td> <input type="button" value="+" onclick="click_enter_value('+')" style="border-radius: 25px;" /> </td>
+    </tr>
+    <tr>
+      <td> <input type="button" value="0" onclick="click_enter_value('0')" /> </td>
+      <td> <input type="button" value="." onclick="click_enter_value('.')" /> </td>
+      <td> <input type="button" value="=" onclick="calculate()" id="btn" style="background-color: #606167;" /> </td>
+      <td> <input type="button" value="*" onclick="click_enter_value('*')" style="border-radius: 25px; " /> </td>
+    </tr>
+  </table>
+</body>
+<script>
+  // This function clears all the values
+  function clearScreen() {
+    document.getElementById("result").value = "";
+  }
+  // This function enter values the values on screen
+  function click_enter_value(value) {
+    document.getElementById("result").value += value;
+  }
+  // This function evaluates the expression and returns the result
+  function calculate() {
+    let expression = document.getElementById("result").value;
+    let result;
+    try {
+      result = eval(expression);
+    } catch (error) {
+      result = "Error!";
+    }
+    document.getElementById("result").value = result;
+  }
+</script>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>Currency Converter App in JavaScript | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="currency_converter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Currency Converter</header>
+      <form action="#">
+        <div class="amount">
+          <p>Enter Amount</p>
+          <input type="text" id="amount" placeholder="Enter Number">
+        </div>
+        <div class="drop-list">
+            <!-- *****this div is used for (From)***** -->
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+         
+              <select id="from">   
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="CNY">CNY</option>
+                <option value="CHF">CHF</option>
+                <option value="AUD">AUD</option>
+                <option value="PLN">PLN</option>
+                <option value="TRY">TRY</option>
+                <option value="CAD">CAD</option>
+                <option value="JPY">JPY</option>
+                <option value="GBP">GBP</option>
+                <option value="NZD">NZD</option>
+                <option value="KRW">KRW</option>
+                <option value="DKK">DKK</option>
+                <option value="HKD">HKD</option>
+ 
+            </select>
+            </div>
+          </div>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+            <!-- *****this div is used for (To)***** -->
+          <div class="to">
+            <p>To</p>
+            <div class="select-box">
+             
+              <select id="to"> 
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="CNY">CNY</option>
+                <option value="CHF">CHF</option>
+                <option value="AUD">AUD</option>
+                <option value="PLN">PLN</option>
+                <option value="TRY">TRY</option>
+                <option value="CAD">CAD</option>
+                <option value="JPY">JPY</option>
+                <option value="GBP">GBP</option>
+                <option value="NZD">NZD</option>
+                <option value="KRW">KRW</option>
+                <option value="DKK">DKK</option>
+                <option value="HKD">HKD</option>
+                
+              </select>
+            </div>
+          </div>
+        </div>
+            <!-- *****this div is used for (output or result)***** -->
+        <div class="exchange-rate"  id="result">
+            Getting exchange rate...
+        </div>
+        <button type="button" id="convert">Convert Currency</button>
+      </form>
+    </div>
+  </body>
+  <script src="currency_converter.js"></script>
+
+</html>

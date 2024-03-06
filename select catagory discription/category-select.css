@@ -1,0 +1,31 @@
+       body{
+        background-color: #ccc;
+       }
+       #category-select {
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+       
+    }  
+    #data-container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #e7e4e4;
+        background-color: #fcf3f3f7;
+        border-radius: 5px;
+      }
+      .author {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .category {
+        color: #0b0808;
+      }    
+      .quote {
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-top: 3px;
+      }
+      

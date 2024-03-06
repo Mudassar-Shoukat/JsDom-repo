@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Age Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: rgba(121, 117, 1, 0.27);
+      }
+      .container {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 500px;
+        height: 200px;
+        background-color: rgb(239, 234, 228);
+        border: 2px dotted rgb(179, 177, 177);
+        border-top-right-radius: 13px;
+        border-top-left-radius: 13px;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input {
+        padding: 6px;
+        height: 18px;
+        width: 300px;
+        border: 1px solid #827777;
+        border-radius: 5px;
+      }
+      button {
+        padding: 8px 15px;
+        border: none;
+        background-color: #575859;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+      }
+      #ageResult {
+        margin-top: 20px;
+        margin-left: 15px;
+        font-weight: bold;
+        background-color: rgb(221, 217, 212);
+        height: 40px;
+        width: 470px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Age Calculator</h1>
+      <label for="birthdate">Enter Your Date of Birth:</label>
+      <input type="date" id="birthdate" />
+      <button onclick="calculateAge()">Calculate Age</button>
+      <p id="ageResult"></p>
+    </div>
+  </body>
+
+  <script>
+    function calculateAge() {
+      const birthdate = new Date(document.getElementById("birthdate").value);
+      const today = new Date();
+
+      const ageYears = today.getFullYear() - birthdate.getFullYear();
+      const ageMonths = today.getMonth() - birthdate.getMonth();
+      const ageDays = today.getDay() - birthdate.getDay();
+
+      const ageResult = `Your are ${ageYears} years, ${ageMonths} months and ${ageDays} days old.`;
+      document.getElementById("ageResult").textContent = ageResult;
+    }
+  </script>
+</html>
